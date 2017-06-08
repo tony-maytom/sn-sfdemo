@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Default parent company. Enter the sys_id of core_company record to use as parent to all other companies</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_12061_sf_bridge.parent_company.default</name>
+        <read_roles/>
+        <suffix>parent_company.default</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>kit.tm</sys_created_by>
+        <sys_created_on>2017-06-08 02:21:53</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>5cf7e654dbd37200411cfabdbf961944</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_12061_sf_bridge.parent_company.default</sys_name>
+        <sys_package display_value="Successfactors Integration Bridge" source="x_12061_sf_bridge">0e16a214dbd37200411cfabdbf961948</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Successfactors Integration Bridge">0e16a214dbd37200411cfabdbf961948</sys_scope>
+        <sys_update_name>sys_properties_5cf7e654dbd37200411cfabdbf961944</sys_update_name>
+        <sys_updated_by>kit.tm</sys_updated_by>
+        <sys_updated_on>2017-06-08 02:21:53</sys_updated_on>
+        <type>short_string</type>
+        <value>0a5a25eddbb93200411cfabdbf9619ff</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=5cf7e654dbd37200411cfabdbf961944"/>
+</record_update>
