@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Successfactors bridge master" max_length="40" name="x_12061_sf_bridge_master" type="collection">
+        <element choice="1" choice_field="entity" choice_table="x_12061_sf_bridge_processor" label="Entity" max_length="40" name="bo_name" type="choice">
+            <choice/>
+        </element>
+        <element label="Data type" max_length="40" name="data_type" type="string"/>
+        <element label="ID" max_length="100" name="external_id" type="string"/>
+        <element label="Last modified" max_length="40" name="last_modified" type="integer"/>
+        <element label="Processor" max_length="32" name="processor" reference="x_12061_sf_bridge_processor" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element choice="3" default="pending" label="Processing state" max_length="40" name="state" type="choice">
+            <choice>
+                <element label="Pending" sequence="0" value="pending"/>
+                <element label="In Progress" sequence="1" value="in_progress"/>
+                <element label="Processed" sequence="2" value="processed"/>
+                <element label="Error" sequence="3" value="error"/>
+            </choice>
+        </element>
+        <element label="URI" max_length="1024" name="uri" type="url"/>
+        <index name="index">
+            <element name="bo_name"/>
+            <element name="data_type"/>
+        </index>
+        <index name="index2">
+            <element name="external_id"/>
+        </index>
+        <index name="index3">
+            <element name="processor"/>
+        </index>
+    </element>
+</database>

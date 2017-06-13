@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="entity" table="x_12061_sf_bridge_processor" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FOCompany</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_processor</name>
+            <sequence>0</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:28:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>daca6fb8db133200411cfabdbf9619f6</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:29:53</sys_updated_on>
+            <value>focompany</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FOCostCenter</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_processor</name>
+            <sequence>1</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:28:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>18ea2bb8db133200411cfabdbf96193d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:29:49</sys_updated_on>
+            <value>focostcenter</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FOBusinessUnit</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_processor</name>
+            <sequence>2</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:29:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>710b6fb8db133200411cfabdbf9619db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:29:39</sys_updated_on>
+            <value>fobusinessunit</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FODivision</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_processor</name>
+            <sequence>3</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:30:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ab2befb8db133200411cfabdbf9619c2</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:30:25</sys_updated_on>
+            <value>fodivision</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FODepartment</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_processor</name>
+            <sequence>4</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:30:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>734b63f8db133200411cfabdbf9619bc</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:30:39</sys_updated_on>
+            <value>fodepartment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FOLocationGroup</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_processor</name>
+            <sequence>5</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:30:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a75bafb8db133200411cfabdbf96191d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:30:59</sys_updated_on>
+            <value>folocationgroup</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FOLocation</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_processor</name>
+            <sequence>6</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:31:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>247ba3f8db133200411cfabdbf9619a1</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:31:11</sys_updated_on>
+            <value>folocation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>User</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_processor</name>
+            <sequence>7</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:31:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>277be3f8db133200411cfabdbf96193e</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:32:06</sys_updated_on>
+            <value>user</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Photo</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_processor</name>
+            <sequence>8</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:32:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0cbb27f8db133200411cfabdbf9619ee</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:32:15</sys_updated_on>
+            <value>photo</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>entity</element>
+            <name>x_12061_sf_bridge_processor</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 20:28:18</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>733d3b39db133200411cfabdbf961953</sys_id>
+            <sys_mod_count>22</sys_mod_count>
+            <sys_name>entity</sys_name>
+            <sys_package display_value="Successfactors Integration Bridge" source="x_12061_sf_bridge">0e16a214dbd37200411cfabdbf961948</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Successfactors Integration Bridge">0e16a214dbd37200411cfabdbf961948</sys_scope>
+            <sys_update_name>sys_choice_x_12061_sf_bridge_processor_entity</sys_update_name>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:32:13</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

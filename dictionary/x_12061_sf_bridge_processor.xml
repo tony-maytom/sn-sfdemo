@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Successfactors Bridge Processor" max_length="40" name="x_12061_sf_bridge_processor" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Config" max_length="32" name="config" read_only="true" reference="x_12061_sf_bridge_config" type="reference"/>
+        <element choice="1" label="Entity" max_length="40" name="entity" type="choice">
+            <choice>
+                <element label="FOCompany" sequence="0" value="focompany"/>
+                <element label="FOCostCenter" sequence="1" value="focostcenter"/>
+                <element label="FOBusinessUnit" sequence="2" value="fobusinessunit"/>
+                <element label="FODivision" sequence="3" value="fodivision"/>
+                <element label="FODepartment" sequence="4" value="fodepartment"/>
+                <element label="FOLocationGroup" sequence="5" value="folocationgroup"/>
+                <element label="FOLocation" sequence="6" value="folocation"/>
+                <element label="User" sequence="7" value="user"/>
+                <element label="Photo" sequence="8" value="photo"/>
+            </choice>
+        </element>
+        <element label="$filter" max_length="1000" name="filter" type="string"/>
+        <element label="HTTP Method" max_length="32" name="http_method" reference="sys_rest_message_fn" reference_qual="javascript:'rest_message.sys_id=' + current.config.service.sys_id;" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="base_table=sys_import_set_row,skip_root=true" label="Import set table" max_length="80" name="import_set" type="table_name"/>
+        <element label="Last run" max_length="40" name="last_run_date" type="glide_date_time"/>
+        <element display="true" label="Name" max_length="180" name="name" type="string"/>
+        <element label="Order" max_length="40" name="order" type="integer"/>
+        <element label="$select" max_length="1000" name="select" type="string"/>
+        <element label="Test mode" max_length="40" name="test" type="boolean"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element label="ID only" sequence="0" value="id"/>
+                <element label="Data" sequence="1" value="data"/>
+            </choice>
+        </element>
+        <element label="URI" max_length="1024" name="uri" type="url"/>
+        <index name="index">
+            <element name="http_method"/>
+        </index>
+        <index name="index2">
+            <element name="config"/>
+        </index>
+    </element>
+</database>

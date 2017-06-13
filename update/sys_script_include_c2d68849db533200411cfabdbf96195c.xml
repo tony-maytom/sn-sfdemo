@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_12061_sf_bridge.SuccessFactorsRESTUtils</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SuccessFactorsRESTUtils</name>
+        <script><![CDATA[var SuccessFactorsRESTUtils = Class.create();
+SuccessFactorsRESTUtils.prototype = {
+	initialize: function() {
+	},
+	
+	process: function() {
+		
+	},
+	
+	buildUriParm: function(processor /*GlideRecord*/) {
+		var uri = processor.getValue('uri');
+		// Response format
+		var respFormat = gs.getProperty('x_12061_sf_bridge.rest_parm.format', 'json');
+		uri += "?$format=" + respFormat;
+		// Check Test Mode
+		if (processor.getValue('test') === 'true') {
+			var testModeTopN = gs.getProperty('x_12061_sf_bridge.rest_parm.top_n', '10');
+			uri += "&$top=" + testModeTopN;
+		}
+		// Get select properties
+		uri += "&$select=" + processor.getValue('select');
+		// Check for custom filter, default filter appends lastModified
+		if (this._notNil(processor.getValue('filter'))) {
+			uri += "&$filter=" + processor.getValue('filter') + ","; // Comma added to append lastModified property
+		} else {
+			uri += "&$filter="; // default filter only
+		}
+		/*
+		* Finally, append the lastModified property
+		* $filter=lastModifiedOn ge datetime'1970-01-01T00:00:00'
+		*/ 
+		var lastModified = this.getLastModifiedProperty(processor.getValue('entity'));
+		if (this._nil(processor.getValue('last_run_date'))) {
+			uri += lastModified + ' ge datetime\'1970-01-01T00:00:00\'';
+		} else {
+			uri += lastModified + ' ge datetime\'' + processor.getValue('last_run_date').replace(' ','T') + '\'';
+		}
+		return encodeURI(uri); // Encoded URI
+	},
+	
+	buildMasterId: function(response /*REST response*/, processor /*GlideRecord*/) {
+		var masterId = []; // Initialise return array
+		var grMaster = new GlideRecord('x_12061_sf_bridge_master');
+		grMaster.initialize();
+		grMaster.setValue('state', 'pending');
+		for (var i=0; i< response.d.results.length; i++) {
+			if (this._notNil(response.d.results[i].__metadata.type)) {
+				grMaster.setValue('data_type', response.d.results[i].__metadata.type);
+			}
+			if (this._notNil(processor)) {
+				grMaster.setValue('processor', processor.getUniqueValue());
+				grMaster.setValue('bo_name' /*entity*/, processor.getValue('entity'));
+			}
+			if (this._notNil(response.d.results[i].__metadata.uri)) {
+				grMaster.setValue('uri', response.d.results[i].__metadata.uri);
+			}
+			/*Depending upon the entity, the unqiue ID is different*/
+			if (this._notNil(response.d.results[i].externalCode)) { /*Foundation Object*/
+				grMaster.setValue('external_id', response.d.results[i].externalCode);
+			}
+			if (this._notNil(response.d.results[i].userId)) { /*User entity*/
+				grMaster.setValue('external_id', response.d.results[i].userId);
+			}
+			if (this._notNil(response.d.results[i].photoId)) { /*Photo entity*/
+				grMaster.setValue('external_id', response.d.results[i].photoId);
+			}
+			/*Depending upon the entity, the modified on is different*/
+			if (this._notNil(response.d.results[i].lastModifiedOn)) { /*Foundation Object*/
+				grMaster.setValue('last_modified', response.d.results[i].lastModifiedOn);
+			}
+			if (this._notNil(response.d.results[i].lastModified)) { /*User/photo entity*/
+				grMaster.setValue('last_modified', response.d.results[i].lastModified);
+			}
+			masterId.push(grMaster.insert());
+		}
+		return masterId; // Array | x_12061_sf_bridge_master.sys_id
+	},
+	/*
+ 	* Returns the property that identifies when the record was last modified
+ 	*/
+	getLastModifiedProperty: function(entity /*String*/) {
+		var modifiedProperty = 'lastModified'; // Initialise
+		var lastModified = gs.getProperty('x_12061_sf_bridge.entity.lastModified').split(',');
+		var lastModifiedOn = gs.getProperty('x_12061_sf_bridge.entity.lastModifiedOn').split(',');
+		// Determine if the entity is within which array
+		if (this._arrayContains(lastModified, entity)) {
+			modifiedProperty = 'lastModified';
+		} else if (this._arrayContains(lastModified, entity)) {
+			modifiedProperty = 'lastModifiedOn';
+		} else if (entity.toString().toLowerCase().startsWith('fo')) { 
+			// Failsafe if the entity name starts with "fo", use lastModifiedOn
+			modifiedProperty = 'lastModifiedOn';
+		}
+		return modifiedProperty; // String
+	},
+	/*
+ 	* Returns true if the given item is null, undefined, or evaluates to the empty string.
+ 	*/
+	_nil: function(item) {
+		return (item == null) || (typeof item == 'undefined') || ('' == '' + item);
+	},
+	
+	/*
+ 	* Returns true if the given item exists and is not empty (the logical inverse of .nil(), above).
+ 	*/
+	_notNil: function(item) {
+		return !this._nil(item);
+	},
+	/*
+	* Determines if specified element is contained within the array
+	*/
+	_arrayContains: function(array, element){
+        array = this._convertArray(array);
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == element) {
+                return true;
+            }
+        }
+        return false;
+    },
+	/*
+	*Converts to array
+	*/
+	_convertArray: function(a){
+        if (typeof a.size === 'function' && a.size() > 0) {
+            var newArray = [];
+            for (var i = 0; i < a.size(); i++) {
+                var val = a.get(i);
+                newArray.push(val);
+            }
+            a = newArray;
+        }
+        return a;
+    },
+	type: 'SuccessFactorsRESTUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>kit.tm</sys_created_by>
+        <sys_created_on>2017-06-10 01:58:42</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c2d68849db533200411cfabdbf96195c</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>SuccessFactorsRESTUtils</sys_name>
+        <sys_package display_value="Successfactors Integration Bridge" source="x_12061_sf_bridge">0e16a214dbd37200411cfabdbf961948</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Successfactors Integration Bridge">0e16a214dbd37200411cfabdbf961948</sys_scope>
+        <sys_update_name>sys_script_include_c2d68849db533200411cfabdbf96195c</sys_update_name>
+        <sys_updated_by>kit.tm</sys_updated_by>
+        <sys_updated_on>2017-06-10 06:15:56</sys_updated_on>
+    </sys_script_include>
+</record_update>

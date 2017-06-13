@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Successafctors bridge configuration" max_length="40" name="x_12061_sf_bridge_config" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Schedule enabled" max_length="40" name="enable_schedule" type="boolean"/>
+        <element choice="1" label="Instance type" max_length="40" name="instance_type" type="choice">
+            <choice>
+                <element label="Development" sequence="0" value="OriginTest"/>
+                <element label="Test" sequence="1" value="OriginDR2"/>
+                <element label="Production" sequence="2" value="Origin"/>
+            </choice>
+        </element>
+        <element label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element label="Service" max_length="32" name="service" reference="sys_rest_message" type="reference"/>
+        <index name="index">
+            <element name="service"/>
+        </index>
+    </element>
+</database>

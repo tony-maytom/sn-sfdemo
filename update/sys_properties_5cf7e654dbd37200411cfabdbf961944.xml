@@ -11,7 +11,7 @@
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>kit.tm</sys_created_by>
         <sys_created_on>2017-06-08 02:21:53</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>5cf7e654dbd37200411cfabdbf961944</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_12061_sf_bridge.parent_company.default</sys_name>

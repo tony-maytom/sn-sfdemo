@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_12061_sf_bridge_master" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pending</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_master</name>
+            <sequence>0</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 19:59:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ee4427b4db133200411cfabdbf961942</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:00:05</sys_updated_on>
+            <value>pending</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>In Progress</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_master</name>
+            <sequence>1</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 19:59:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ae4427b4db133200411cfabdbf961943</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:00:14</sys_updated_on>
+            <value>in_progress</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Processed</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_master</name>
+            <sequence>2</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 19:59:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6a4427b4db133200411cfabdbf961944</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:00:17</sys_updated_on>
+            <value>processed</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Error</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_master</name>
+            <sequence>3</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 19:59:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>264427b4db133200411cfabdbf961945</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:00:20</sys_updated_on>
+            <value>error</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <name>x_12061_sf_bridge_master</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 19:59:36</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>b73d3b39db133200411cfabdbf96194d</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="Successfactors Integration Bridge" source="x_12061_sf_bridge">0e16a214dbd37200411cfabdbf961948</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Successfactors Integration Bridge">0e16a214dbd37200411cfabdbf961948</sys_scope>
+            <sys_update_name>sys_choice_x_12061_sf_bridge_master_state</sys_update_name>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 20:00:17</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

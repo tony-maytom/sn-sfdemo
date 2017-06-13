@@ -11,13 +11,13 @@
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
-        <qualified_name>Successfactors [ FOCompany ]</qualified_name>
+        <qualified_name>Successfactors oData REST [ FOCompany ]</qualified_name>
         <rest_endpoint>https://api10.successfactors.com/odata/v2/FOCompany</rest_endpoint>
-        <rest_message display_value="Successfactors">bfad36a0db133200411cfabdbf961973</rest_message>
+        <rest_message display_value="Successfactors oData REST">bfad36a0db133200411cfabdbf961973</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>kit.tm</sys_created_by>
         <sys_created_on>2017-06-08 22:35:51</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>503e3aa0db133200411cfabdbf9619ff</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>FOCompany</sys_name>

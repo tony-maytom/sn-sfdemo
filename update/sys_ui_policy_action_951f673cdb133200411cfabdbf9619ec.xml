@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>http_method</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>kit.tm</sys_created_by>
+        <sys_created_on>2017-06-09 20:46:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>951f673cdb133200411cfabdbf9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>http_method</sys_name>
+        <sys_package display_value="Successfactors Integration Bridge" source="x_12061_sf_bridge">0e16a214dbd37200411cfabdbf961948</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Successfactors Integration Bridge">0e16a214dbd37200411cfabdbf961948</sys_scope>
+        <sys_update_name>sys_ui_policy_action_951f673cdb133200411cfabdbf9619ec</sys_update_name>
+        <sys_updated_by>kit.tm</sys_updated_by>
+        <sys_updated_on>2017-06-09 20:46:46</sys_updated_on>
+        <table>x_12061_sf_bridge_processor</table>
+        <ui_policy display_value="Successfactors bridge processor always">2bce237cdb133200411cfabdbf961968</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

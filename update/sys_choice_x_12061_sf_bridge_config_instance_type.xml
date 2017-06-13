@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="instance_type" table="x_12061_sf_bridge_config" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>instance_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Development</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_config</name>
+            <sequence>0</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 22:01:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fe10c045db533200411cfabdbf9619e1</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 22:03:19</sys_updated_on>
+            <value>OriginTest</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>instance_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Test</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_config</name>
+            <sequence>1</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 22:02:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3f108085db533200411cfabdbf961968</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 22:03:22</sys_updated_on>
+            <value>OriginDR2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>instance_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Production</label>
+            <language>en</language>
+            <name>x_12061_sf_bridge_config</name>
+            <sequence>2</sequence>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 22:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>83700405db533200411cfabdbf961996</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 22:03:34</sys_updated_on>
+            <value>Origin</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>instance_type</element>
+            <name>x_12061_sf_bridge_config</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>kit.tm</sys_created_by>
+            <sys_created_on>2017-06-09 22:01:08</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>f73d3b39db133200411cfabdbf961948</sys_id>
+            <sys_mod_count>10</sys_mod_count>
+            <sys_name>instance_type</sys_name>
+            <sys_package display_value="Successfactors Integration Bridge" source="x_12061_sf_bridge">0e16a214dbd37200411cfabdbf961948</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Successfactors Integration Bridge">0e16a214dbd37200411cfabdbf961948</sys_scope>
+            <sys_update_name>sys_choice_x_12061_sf_bridge_config_instance_type</sys_update_name>
+            <sys_updated_by>kit.tm</sys_updated_by>
+            <sys_updated_on>2017-06-09 22:03:31</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
